@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PROTOCOL: WHITE CAT // SYSTEM: BRAND CONCEPT CCO // STATUS: LOOKING FOR FLYNN -->
+    <title>Grid | Connection</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #00ffcc;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        /* Кибер-контур белой кошки */
+        .cat-scanner {
+            width: 150px;
+            height: 150px;
+            border: 3px double #ffffff;
+            border-radius: 50% 50% 40% 40%;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 0 20px #ffffff, inset 0 0 15px rgba(255,255,255,0.3);
+            transition: all 0.4s ease;
+        }
+        /* Левое ушко */
+        .cat-scanner::before {
+            content: '';
+            position: absolute;
+            top: -20px; left: 10px;
+            width: 0; height: 0;
+            border-left: 25px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 35px solid #ffffff;
+            transform: rotate(-15px);
+        }
+        /* Правое ушко */
+        .cat-scanner::after {
+            content: '';
+            position: absolute;
+            top: -20px; right: 10px;
+            width: 0; height: 0;
+            border-right: 25px solid transparent;
+            border-left: 15px solid transparent;
+            border-bottom: 35px solid #ffffff;
+            transform: rotate(15deg);
+        }
+        .cat-scanner:hover {
+            border-color: #ff007f;
+            box-shadow: 0 0 35px #ff007f;
+        }
+        .status {
+            margin-top: 50px;
+            letter-spacing: 4px;
+            font-size: 13px;
+            text-transform: uppercase;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cat-scanner" onclick="activateDisc()"></div>
+    <div class="status">Вход в систему ограничен. Ожидание сигнала...</div>
+
+    <script>
+        console.log("%c[YULA PROTOCOL ACTIVATED]", "color: #ff007f; font-size: 16px; font-weight: bold;");
+        console.log("Привет, Сэм. Мы знаем, что ты здесь. Ты ищешь код, мы ищем тебя.");
+        console.log("Декодируй строку ниже, чтобы узнать, где ждет Белая Кошка:");
+        // Боевой шифр Brand Concept CCO с вашими реальными контактами
+        console.log("Base64 Cipher: QnJhbmQgQ29uY2VwdCBDQ08uIEthbGluaW5ncmFkLCBBbWFsaWVuYXUsIEt1dHV6b3ZhIHN0LiBUaGUgV2hpdGUgQ2F0IFByb3RvY29sIGlzIGFjdGl2ZS4gQ29udGFjdDogY3JlYXRpdmVkaXJlY3RvckBpbmJveC5ydSB8IFRHIENoYW5uZWw6IFRoZSB3aGl0ZSBjYXQgcHJvdG9jb2w=");
+
+        function activateDisc() {
+            alert("Программа «LETHAL» запущена. Сканирование вашего IP-адреса... Данные в безопасности.");
+        }
+    </script>
+</body>
+</html>
